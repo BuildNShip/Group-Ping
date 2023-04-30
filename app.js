@@ -1,3 +1,5 @@
+let createBtn = document.getElementById("tagAll-btn")
+
 function extractGroupUsers() {
     const groupSubtitle = document.querySelector("[data-testid='chat-subtitle']")
 
@@ -41,6 +43,7 @@ function extractGroupUsers() {
   }
   
 async function tagEveryone() {
+    console.log('tagEveryOne')
     const groupUsers = extractGroupUsers()
 
     const chatInput = document.querySelector("[data-testid='conversation-compose-box-input'] > p")
@@ -53,7 +56,7 @@ async function tagEveryone() {
       document.execCommand('insertText', false, `@${user}`)
 
       // await waitForElement("[data-testid='contact-mention-list-item']")
-      await sleep(300)
+      // await sleep(300)
 
       // Send "tab" key to autocomplete the user
       const keyboardEvent = new KeyboardEvent('keydown', {
@@ -72,4 +75,7 @@ async function tagEveryone() {
     }
   }
 
-tagEveryone();
+
+createBtn.onclick = () => {
+  tagEveryone()
+}

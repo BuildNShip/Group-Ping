@@ -1,0 +1,13 @@
+{
+  "name": "Group-Ping",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Group Ping is an Whatsapp tool",
+
+
+  "action": {
+    "default_title": "Group Ping",
+    "default_popup": "popup.html"
+  }
+  
+}
